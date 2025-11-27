@@ -96,11 +96,10 @@ streamlit run frontend/app.py
 The web interface will open automatically at `http://localhost:8501`
 
 ### 8. Test the API
-Two inputs are required {
-    skill_id: range from 1 to 8 (1 to 8 some subjects or technical or topics or soft skills)
-    correct: 1 for correct, 0 for incorrect
-}
-
+Two inputs are required:
+   - skill_id: range from 1 to 8 (1 to 8 some subjects or technical or topics or soft skills)
+   - correct: 1 for correct, 0 for incorrect
+- Basically the past performance of student.
 ## Usage
 
 1. **Add Interactions**: Use the sidebar to add student interactions (Skill ID 1-8, Correct/Incorrect)
