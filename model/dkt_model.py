@@ -5,13 +5,18 @@ import numpy as np
 
 
 # creating 1D vector input for GRU
-def create_input(skill_id, correct, num_skills = 8):
+def create_input(skill_ids, corrects, num_skills = 8):
     # one hot encoding
-    skill_id_enc = torch.nn.functional.one_hot(skill_id - 1, num_skills)
-    correct_enc = torch.nn.functional.one_hot(correct, 2)
+    skill_id_enc = torch.nn.functional.one_hot(skill_ids, num_skills)
+    
+    correct_mask = corrects.unsqueeze(-1)
+    wrong_mask = 1 - correct_mask
+
+    correct_part = skill_id_enc * correct_mask
+    wrong_part = skill_id_enc * wrong_mask
 
     # combined input
-    gru_input = torch.cat([skill_id_enc, correct_enc], dim = -1).float()
+    gru_input = torch.cat([correct_part, wrong_part], dim = -1).float()
 
     return gru_input
 

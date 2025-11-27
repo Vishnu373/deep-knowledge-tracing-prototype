@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # generating synthetic data
-def generate_data(num_students = 100, num_skills = 8, max_seq_len = 20):
+def generate_data(num_students = 100, max_seq_len = 20, num_skills = 8,):
     data = []
 
     for student_id in range(1, num_students + 1):
