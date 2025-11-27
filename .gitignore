@@ -22,3 +22,6 @@ dist/
 
 # Ignore editor folders (example for VS Code)
 .vscode/
+
+# Ignore extra folders
+/data
