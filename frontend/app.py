@@ -62,13 +62,18 @@ with col2:
                 st.metric(label=f"Predicted Success for Skill {next_skill}", value=f"{pred_success:.1%}")
                 st.progress(pred_success)
                 
+                # Difficulty recommendation logic
                 if pred_success > 0.7:
-                    st.success("High chance of success! Ready for harder content.")
-
+                    st.success("Recommended difficulty level: Harder")
+                    st.info("High chance of success! Student is ready for more challenging content.")
+                
                 elif pred_success > 0.4:
-                    st.warning("Moderate chance. Good for practice.")
+                    st.warning("Recommended difficulty level: Same")
+                    st.info("Moderate chance of success. Continue practicing at current level.")
+
                 else:
-                    st.error("Low chance. Review recommended.")
+                    st.error("Recommended difficulty level: Easier")
+                    st.info("Low chance of success. Review fundamentals or try easier content.")
             
             else:
                 st.error(f"API Error: {response.status_code}")
