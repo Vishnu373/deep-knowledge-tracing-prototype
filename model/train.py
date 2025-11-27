@@ -54,7 +54,7 @@ def seq_preparation(train_seq, num_skills = 8):
 
     return X_list, y_list
 
-def train_model(X_train, y_train, X_test, y_test, num_skills = 8, hidden_size = 128, epochs = 20, learning_rate = 0.001):
+def train_model(X_train, y_train, num_skills=8, hidden_size=128, epochs=50, learning_rate=0.001):
     # 1. model
     model = DKTModel(num_skills, hidden_size)
 
@@ -96,3 +96,12 @@ def train_model(X_train, y_train, X_test, y_test, num_skills = 8, hidden_size = 
     torch.save(model.state_dict(), "model/dkt_model.pth")
     
     return model
+
+
+if __name__ == "__main__":
+    sequences = data_preparation()
+    train, test = data_split(sequences)
+    X_train, y_train = seq_preparation(train)
+    X_test, y_test = seq_preparation(test)
+    
+    train_model(X_train, y_train)

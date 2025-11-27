@@ -37,8 +37,11 @@ class DKTModel(nn.Module):
         self.gru = nn.GRU(
             input_size = self.input_size,
             hidden_size = hidden_size,
-            batch_first = True
+            batch_first = True,
         )
+
+        # dropout percentage
+        self.dropout = nn.Dropout(0.3)
 
         # output layer
         self.fc = nn.Linear (
@@ -48,6 +51,7 @@ class DKTModel(nn.Module):
 
     def forward(self, input):
         gru_out, _ = self.gru(input)
+        gru_out = self.dropout(gru_out)
         logits = self.fc(gru_out)
         predictions = self.sigmoid(logits)
 
