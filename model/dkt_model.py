@@ -1,8 +1,5 @@
 import torch
 import torch.nn as nn
-import pandas as pd
-import numpy as np
-
 
 # creating 1D vector input for GRU
 def create_input(skill_ids, corrects, num_skills = 8):

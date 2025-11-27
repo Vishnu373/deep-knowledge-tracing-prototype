@@ -65,7 +65,7 @@ Required packages:
 - `fastapi` - API framework
 - `uvicorn` - ASGI server
 - `streamlit` - Web UI framework
-- `pandas` - Data manipulation
+- `pandas` - data reading (in this use case)
 - `scikit-learn` - Train/test splitting
 - `requests` - HTTP client
 
