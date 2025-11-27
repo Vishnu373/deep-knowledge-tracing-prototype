@@ -97,8 +97,8 @@ The web interface will open automatically at `http://localhost:8501`
 
 ### 8. Test the API
 Two inputs are required {
-    skill_id: range from 1 to 8 (1 to 8 some subjects or technical or topics or soft skills)
-    correct: 1 for correct, 0 for incorrect
+   - skill_id: range from 1 to 8 (1 to 8 some subjects or technical or topics or soft skills)
+   - correct: 1 for correct, 0 for incorrect
 }
 
 ## Usage
