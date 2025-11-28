@@ -96,12 +96,3 @@ def train_model(X_train, y_train, num_skills=8, hidden_size=128, epochs=50, lear
     torch.save(model.state_dict(), "model/dkt_model.pth")
     
     return model
-
-
-if __name__ == "__main__":
-    sequences = data_preparation()
-    train, test = data_split(sequences)
-    X_train, y_train = seq_preparation(train)
-    X_test, y_test = seq_preparation(test)
-    
-    train_model(X_train, y_train)
