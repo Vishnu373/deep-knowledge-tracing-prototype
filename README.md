@@ -33,7 +33,6 @@ deep-knowledge-tracing-prototype/
 ├── data/
 │   └── synthetic_data.csv    # Training data
 ├── explorations.ipynb        # Jupyter notebook for data exploration
-├── utils.py                  # Shared utility functions
 └── requirements.txt
 ```
 
@@ -61,15 +60,6 @@ python -m venv env
 ```bash
 pip install -r requirements.txt
 ```
-
-Required packages:
-- `torch` - PyTorch for the GRU model
-- `fastapi` - API framework
-- `uvicorn` - ASGI server
-- `streamlit` - Web UI framework
-- `pandas` - data reading (in this use case)
-- `scikit-learn` - Train/test splitting
-- `requests` - HTTP client
 
 ### 5. Train the Model (Optional - model already trained)
 ```bash
