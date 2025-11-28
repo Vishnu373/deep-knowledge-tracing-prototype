@@ -5,3 +5,6 @@ uvicorn
 scikit-learn
 requests
 streamlit
+jupyter
+matplotlib
+seaborn

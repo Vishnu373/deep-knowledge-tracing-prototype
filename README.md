@@ -32,6 +32,8 @@ deep-knowledge-tracing-prototype/
 │   └── app.py                # Streamlit web interface
 ├── data/
 │   └── synthetic_data.csv    # Training data
+├── explorations.ipynb        # Jupyter notebook for data exploration
+├── utils.py                  # Shared utility functions
 └── requirements.txt
 ```
 
@@ -100,6 +102,28 @@ Two inputs are required:
    - skill_id: range from 1 to 8 (1 to 8 some subjects or technical or topics or soft skills)
    - correct: 1 for correct, 0 for incorrect
 - Basically the past performance of student.
+
+## Data Exploration
+
+### Explore with Jupyter Notebook
+To analyze the data and experiment with the model interactively:
+
+```bash
+jupyter notebook explorations.ipynb
+```
+
+The notebook includes:
+- **Data Analysis**: Visualize skill distributions, success rates, and student patterns
+- **Model Testing**: Test predictions with different student histories
+- **Experimentation**: Compare how different learning paths affect predictions
+- **Interactive Cells**: Modify student histories and see real-time predictions
+
+**What you'll learn:**
+- Which skills are most/least difficult
+- How the model adapts to student performance
+- Impact of practice on predictions
+- Personalized learning recommendations
+
 ## Usage
 
 1. **Add Interactions**: Use the sidebar to add student interactions (Skill ID 1-8, Correct/Incorrect)
